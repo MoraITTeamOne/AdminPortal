@@ -1,0 +1,80 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="cont">
+        <div class="container" >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="image/train.png" height="70" alt="">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">signup</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<div id="top-image" class="col-lg-10"></div>
+
+	
+
+	<div class="container" >
+		<div class="row" >
+			<div class="col-md-8">
+				<div class="jumbotron" id="jumbo">
+					<h1 id="appname">flash</h1>
+					<p id="paragraph">Live train status updater and bus rating system</p>
+					<a href="aboutapp.html" class="btn btn-primary btn-lg" id="learn"><img src="image/learn-more.png" height=50 width=200 /></a>
+					
+				</div>
+			</div>
+			<div class=" col-md-4">
+				<h2>Login</h2>
+				<hr>
+				<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+					<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+						<label for="username">Username</label>
+						<input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+							<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+					</div>
+					<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+							<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+					</div>
+					<div class="form-group">
+						<button [disabled]="loading" class="btn btn-primary">Login</button>
+						<img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+						<a [routerLink]="['/register']" class="btn btn-link">Register</a>
+			
+						<div>
+							<a id="forgot" data-toggle="modal" href="#tcModal">Forgot password ?</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+
+
+	

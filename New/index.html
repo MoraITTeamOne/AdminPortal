@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Angular2 Sortable Table</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link data-require="font-awesome@4.6.1" data-semver="4.6.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.23/system-polyfills.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Intl.~locale.en"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="config.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/angular2.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/http.js"></script>
+    <script>
+      System.import('app')
+        .catch(console.error.bind(console));
+		
+	  System.config({
+		packages:{
+			'app':{
+				format:'register',
+				defaultExtension:'js'
+				},
+			},
+		});
+		
+		System.import('app/boot')
+				.then(null,console.error.bind(console));
+    </script>
+  </head>
+ 
+  <body>
+    <main class="container">
+      <my-app>
+        loading...
+      </my-app>
+    </main>
+  </body>
+
+</html>

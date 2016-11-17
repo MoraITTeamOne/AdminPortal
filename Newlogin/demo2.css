@@ -1,0 +1,45 @@
+body{background-color:black;}
+
+#contain{background-color:black;}
+
+
+/*#pageheader{height:75px;
+			background-color:black;}*/
+#top-image {
+background:url('image/train2.jpg') -25px -50px;
+position:fixed ;
+top:50;
+width:100%;
+z-index:0;
+  height:100%;
+  background-size: calc(100% + 50px);
+  opacity:0.5;
+}
+#cont{
+	background-color:black
+	
+}
+#jumbo{
+	background-color:#A9D0F5
+	
+}
+#learn{
+	background-color:#642EFE
+	
+}
+
+#appname{
+	
+	font-family:papyrus;
+	color:#45075B;
+}
+
+#paragraph{
+	
+	font-family:lucida console;
+	
+}
+#forgot{
+	color:#A9D0F5
+}
+	
